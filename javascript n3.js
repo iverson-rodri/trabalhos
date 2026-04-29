@@ -26,7 +26,7 @@ function ConsultarMédiaSemestral() {
     }
         else if (media >=5 && media <7){
             mostrar = "Você precisa fazer recuperação, pois a sua média foi: " + media.toFixed(2)
-            document.getElementById('mostrar').style.color = "yellow";
+            document.getElementById('mostrar').style.color = "orange";
             containerFoto.innerHTML = '<img src="https://png.pngtree.com/png-vector/20240723/ourmid/pngtree-pensive-face-emoji-realistic-png-image_13220755.png" alt="Recuperação" width="100">';
         }
             else{
