@@ -39,6 +39,7 @@ function ConsultarMédiaSemestral() {
 function limparFormulario() {
     document.getElementById('N1').reset();
     document.getElementById('container-foto').innerHTML = "";
+    document.getElementById('mostrar').textContent = "";
 }
 function validarNota(campo){
     const valor = Number(campo.value);
