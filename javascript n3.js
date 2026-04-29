@@ -6,11 +6,19 @@ function ConsultarMédiaSemestral() {
     const atividaden3 = Number(document.getElementById('atividaden3').value);
     const provan3 = Number(document.getElementById('provan3').value);
     let mostrar = '';
+    const inputIds = ['atividaden1', 'provan1', 'provan2', 'atividaden3', 'provan3'];
     const containerFoto = document.getElementById('container-foto');
     const notan1 = (atividaden1 + provan1) / 2;
     const notan3 = (provan3 + atividaden3) / 2;
     const notan2 = (provan2);
     const media = (notan1 + notan2 + notan3) / 3;
+     for (let id of inputIds) {
+        if (document.getElementById(id).value === "") {
+            alert("Por favor, verifique se não ha campos vazios.");
+            return;
+        }
+    }
+
     if (media >= 7) {
         mostrar = "Parabéns, você foi aprovado com a média: " + media.toFixed(2)
        document.getElementById('mostrar').style.color = "green";
@@ -30,6 +38,7 @@ function ConsultarMédiaSemestral() {
         }          
 function limparFormulario() {
     document.getElementById('N1').reset();
+    document.getElementById('container-foto').innerHTML = "";
 }
 function validarNota(campo){
     const valor = Number(campo.value);
